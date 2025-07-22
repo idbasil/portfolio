@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Basil | Data Analyst Portfolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <style>
+
+/* NAVBAR LINKS DEFAULT (grey), HOVER (white + underline), ACTIVE (white + persistent underline) */
+.navbar-dark .navbar-nav .nav-link {
+  color: #adb5bd;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #ffffff;
+}
+
+.navbar-dark .navbar-nav .nav-link::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: #ffffff;
+  transition: width 0.3s ease-in-out;
+  margin: 4px auto 0 auto;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover::after,
+.navbar-dark .navbar-nav .nav-link.active::after {
+  width: 50%;
+}
+
+
+    body {
+      scroll-behavior: smooth;
+      font-family: Arial, sans-serif;
+    }
+
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                  url('images/basil-hero.jpg') no-repeat center center/cover;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+    }
+
+.hero-icons a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1.5rem;
+}
+
+.hero-icons a:hover {
+  color: #ccc;
+  text-decoration: none;
+}
+
+    #about img {
+      border: 5px solid white;
+    }
+
+/* Base style for all filter buttons */
+.filter-btn {
+  background-color: #343a40; /* dark grey when inactive */
+  color: #ced4da; /* light grey text when inactive */
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.filter-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.filter-btn.active {
+  background-color: #000; /* black when active */
+  color: #fff;
+}
+
+    .card-img-top {
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .project-card .card {
+      height: 100%;
+      transition: transform 0.2s ease;
+    }
+
+    .project-card .card:hover {
+      transform: scale(1.02);
+    }
+
+    #contact {
+      background-color: #212529;
+      color: #adb5bd;
+    }
+
+    #contact a {
+      color: #adb5bd;
+      text-decoration: none;
+    }
+
+    #contact a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #212529;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">HOME</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav ms-auto">
+  <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+  <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+  <li class="nav-item"><a class="nav-link" href="https://idbasil.github.io/portfolio/CV/Data_Analyst_CV_Idongesit_Basil.pdf" target="_blank">CV</a></li>
+  <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+</ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero">
+  <h1 class="mb-2">Hello, I am Basil.</strong></h1>
+  <h2 class="mb-3">Data Analyst</h2>
+  <p class="lead mb-4">Bridging data and decision-making with strategic insight.</p>
+
+  <!-- Social Icons -->
+<div class="hero-icons mt-3">
+<div class="hero-icons mt-3 mb-4">
+  <a href="mailto:idongesitbasil@gmail.com" target="_blank"><i class="bi bi-envelope-fill"></i></a>
+  <a href="https://linkedin.com/in/idongesit-basil" target="_blank"><i class="bi bi-linkedin"></i></a>
+  <a href="https://github.com/idongesitbasil" target="_blank"><i class="bi bi-github"></i></a>
+</div>
+
+
+
+  <!-- About Me Button -->
+<a href="#about" class="btn btn-outline-light mt-3" style="font-size: 1rem;">About Me</a>
+</header>
+
+<!-- About Section -->
+<section id="about" class="py-5" style="background-color: #f8f9fa; color: #333;">
+  <div class="container text-center">
+    <img src="images/basil2.jpg" alt="Basil Profile Photo" class="rounded-circle mb-4" width="200" height="200">
+    <div class="mx-auto" style="max-width: 800px;">
+      <p class="fs-5">I am motivated by the belief that data can be used to make better decisions. I want to make it easier for people to understand data and use it meaningfully.</p>
+      <p class="fs-5">With a background in project management, I now focus on building end-to-end data solutions—pipelines, insights, and visualisations—using tools like Python, SQL, R, Power BI, and Excel. I care about real-world impact and enjoy helping teams unlock the full value of their data.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Projects</h2>
+
+    <!-- Filter Buttons -->
+<<div class="text-center mb-4">
+  <button class="btn filter-btn mx-1 active" data-filter="all">All</button>
+  <button class="btn filter-btn mx-1" data-filter="excel">Excel</button>
+  <button class="btn filter-btn mx-1" data-filter="sql">SQL</button>
+  <button class="btn filter-btn mx-1" data-filter="r">R</button>
+  <button class="btn filter-btn mx-1" data-filter="python">Python</button>
+  <button class="btn filter-btn mx-1" data-filter="powerbi">Power BI</button>
+</div>
+
+    <!-- Project Cards -->
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="project-grid">
+
+      <!-- Card 1 -->
+      <div class="col project-card excel">
+        <a href="https://github.com/idongesitbasil/field-team-performance" target="_blank" class="text-decoration-none">
+          <div class="card shadow-sm">
+            <img src="projects/field_team.jpg" class="card-img-top" alt="Field Team Dashboard">
+            <div class="card-body">
+              <span class="badge bg-dark mb-2">Excel</span>
+              <h5 class="card-title">Field Team Dashboard</h5>
+              <p class="card-text">Monitoring field team KPIs across regions using Excel visuals.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col project-card powerbi">
+        <a href="https://github.com/idongesitbasil/Sales-dashboard" target="_blank" class="text-decoration-none">
+          <div class="card shadow-sm">
+            <img src="projects/sales.jpg" class="card-img-top" alt="Sales Performance Dashboard">
+            <div class="card-body">
+              <span class="badge bg-dark mb-2">Power BI</span>
+              <h5 class="card-title">Sales Performance Dashboard</h5>
+              <p class="card-text">Sales performance monitoring using Power BI with SQL-backed datasets.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col project-card r">
+        <a href="https://github.com/idongesitbasil/derby-crime-analysis" target="_blank" class="text-decoration-none">
+          <div class="card shadow-sm">
+            <img src="projects/derby.jpg" class="card-img-top" alt="Derby Crime Analysis">
+            <div class="card-body">
+              <span class="badge bg-dark mb-2">R</span>
+              <h5 class="card-title">Derby Crime Analysis</h5>
+              <p class="card-text">Exploratory & statistical analysis of crime trends using R.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col project-card python">
+        <a href="https://github.com/idongesitbasil/epl-substitution-analysis" target="_blank" class="text-decoration-none">
+          <div class="card shadow-sm">
+            <img src="projects/football.jpg" class="card-img-top" alt="Football Event Analysis">
+            <div class="card-body">
+              <span class="badge bg-dark mb-2">Python</span>
+              <h5 class="card-title">Football Event Analysis</h5>
+              <p class="card-text">API-based match event extraction with ML models to analyse substitution impact using Python.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Filter Script -->
+<script>
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const cards = document.querySelectorAll(".project-card");
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelector(".filter-btn.active").classList.remove("active");
+      btn.classList.add("active");
+      const filter = btn.getAttribute("data-filter");
+
+      cards.forEach(card => {
+        if (filter === "all" || card.classList.contains(filter)) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  });
+</script>
+
+<!-- Contact Section -->
+<section id="contact" class="py-5" style="background-color: #212529;">
+  <style>
+    #contact h2 {
+      color: #fff;
+    }
+
+    #contact p, #contact a {
+      color: #adb5bd;
+    }
+
+    #contact a {
+      text-decoration: none;
+    }
+
+    #contact a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    #contact .contact-icon {
+      font-size: 1.1rem;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+
+    #contact .contact-line {
+      margin-bottom: 0.8rem;
+    }
+  </style>
+
+  <div class="container text-center">
+    <h2 class="mb-4">Contact</h2>
+    <p class="mb-3">Feel free to reach out for collaborations, questions, or a good data conversation.</p>
+
+    <p class="contact-line">
+      <i class="bi bi-geo-alt-fill contact-icon"></i>
+      Derby, UK
+    </p>
+
+<p class="contact-line">
+  <i class="bi bi-envelope-fill contact-icon"></i>
+  <a href="mailto:idongesitbasil@gmail.com">idongesitbasil@gmail.com</a>
+</p>
+
+<p class="contact-line">
+  <i class="bi bi-linkedin contact-icon"></i>
+  <a href="https://linkedin.com/in/idongesit-basil" target="_blank">LinkedIn</a>
+</p>
+
+<p class="contact-line">
+  <i class="bi bi-github contact-icon"></i>
+  <a href="https://github.com/idongesitbasil" target="_blank">GitHub</a>
+</p>
+
+    <p class="small mt-4">© 2024</p>
+  </div>
+</section>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+<!-- Your custom script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const filter = button.getAttribute('data-filter');
+        const cards = document.querySelectorAll('.project-card');
+
+        cards.forEach(card => {
+          if (filter === 'all' || card.classList.contains(filter)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+</script>
+
+<!-- Bootstrap Bundle JS (always last) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
